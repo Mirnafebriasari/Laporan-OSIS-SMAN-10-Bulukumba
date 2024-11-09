@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <a href="{{ url_for('upload_report') }}">Unggah Laporan Baru</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <h2>Daftar Laporan</h2>
+    <ul>
+        {% for report in reports %}
+            <li><strong>{{ report[1] }}</strong> - {{ report[2] }} ({{ report[3] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
