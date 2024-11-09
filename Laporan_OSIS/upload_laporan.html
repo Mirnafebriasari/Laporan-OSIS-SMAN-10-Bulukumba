@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unggah Laporan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Unggah Laporan OSIS</h1>
+    <form method="post" action="{{ url_for('upload_report') }}">
+        <label for="title">Judul:</label>
+        <input type="text" name="title" required>
+        
+        <label for="content">Konten:</label>
+        <textarea name="content" required></textarea>
+        
+        <label for="date">Tanggal:</label>
+        <input type="date" name="date" required>
+        
+        <button type="submit">Unggah</button>
+    </form>
+</body>
+</html>
